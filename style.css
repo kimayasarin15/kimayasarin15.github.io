@@ -1,0 +1,58 @@
+@font-face {
+    font-family: "PP Editorial Old";
+    src: url("../fonts/PPEditorialOld-Ultralight.otf") format("opentype");
+}
+
+:root {
+    font-size: 120%;
+    --color1: white;
+    --color2: #191919;
+    --textL: 4rem;
+    --textM: 2rem;
+    --textS: 1rem;
+
+    --spaceL: 3rem;
+    --spaceM: 2rem;
+    --spaceS: 1rem;
+}
+
+h1 {
+    font-size: var(--textL);
+    text-transform: uppercase;
+    padding-block-start: var(--spaceL);
+}
+
+.name {
+    font-size: var(--textM);
+    padding-block-end: var(--spaceM);
+}
+body {
+    font-family: "PP Editorial Old";
+    font-size: var(--textS);
+    padding-inline: var(--spaceL);
+    color: (var(--color2));
+    block-size: 100vh;
+    display: grid;
+}
+
+ul {
+    /* padding-inline: var(--spaceL); */
+    padding-block: var(--spaceM);
+}
+
+li {
+    padding-block: var(--spaceM);
+    border-block-end-color: var(--color2);
+    border-block-end-style: solid;
+	border-block-end-width: 0.10rem;
+
+    :hover {
+        color: #413CFF;
+    }
+}
+
+footer {
+    a {
+        text-decoration: underline;
+    }
+}
