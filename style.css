@@ -36,7 +36,7 @@ body {
     display: grid;
 }
 
-ul {
+ol {
     padding-block: var(--spaceM);
 }
 
@@ -50,6 +50,7 @@ li {
         color: #413CFF;
     }
 }
+
 
 /* li::after {
     content: "→";
