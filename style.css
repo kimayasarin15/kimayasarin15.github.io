@@ -23,9 +23,10 @@ h1 {
 }
 
 .name {
-    font-size: var(--textM);
+    font-size: var(--textS);
     padding-block-end: var(--spaceM);
 }
+
 body {
     font-family: "PP Editorial Old";
     font-size: var(--textS);
@@ -36,23 +37,30 @@ body {
 }
 
 ul {
-    /* padding-inline: var(--spaceL); */
     padding-block: var(--spaceM);
 }
 
 li {
-    padding-block: var(--spaceM);
+    padding-block: var(--spaceS);
     border-block-end-color: var(--color2);
     border-block-end-style: solid;
 	border-block-end-width: 0.10rem;
-
+    font-size: var(--textM);
     :hover {
         color: #413CFF;
     }
 }
 
-footer {
-    a {
-        text-decoration: underline;
-    }
+/* li::after {
+    content: "→";
+} */
+
+
+footer a {
+   text-decoration: underline;
 }
+
+footer a:hover {
+    color: #413CFF;
+}
+
