@@ -24,7 +24,7 @@ h1 {
 
 .name {
     font-size: var(--textS);
-    padding-block-end: var(--spaceM);
+    padding-block-end: var(--spaceS);
 }
 
 body {
@@ -37,7 +37,8 @@ body {
 }
 
 ol {
-    padding-block: var(--spaceM);
+    padding-block-end: var(--spaceM);
+    padding-block-start: var(--spaceS);
 }
 
 li {
@@ -51,12 +52,6 @@ li {
     }
 }
 
-
-/* li::after {
-    content: "→";
-} */
-
-
 footer a {
    text-decoration: underline;
 }
@@ -65,3 +60,32 @@ footer a:hover {
     color: #413CFF;
 }
 
+
+a:hover {
+    color: #413CFF; 
+}
+
+.end {
+    justify-content: end;
+}
+
+.row, .end {
+    display: flex;
+    flex-direction: row;
+    gap: var(--spaceM);
+    justify-content: space-between;
+}
+
+
+@media (width < 550px) {
+    .row {
+        flex-direction: column;
+        gap: var(--spaces);
+       }
+    body {
+        block-size: 95vh;
+    }
+    li {
+    font-size: calc(var(--textM)/1.5);
+    }
+    }
