@@ -47,8 +47,11 @@ li {
     border-block-end-style: solid;
 	border-block-end-width: 0.10rem;
     font-size: var(--textM);
+    text-transform: uppercase;
+    
     :hover {
         color: #413CFF;
+        /* font-size: calc(var(--textM)*1.5); not sure how I feel about this yet */ 
     }
 }
 
