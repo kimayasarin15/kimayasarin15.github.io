@@ -3,6 +3,24 @@
     src: url("../fonts/PPEditorialOld-Ultralight.otf") format("opentype");
 }
 
+@font-face {
+    font-family: "ABC Whyte Edu";
+    src: url("./ABCWhyteEdu-Bold.woff") format("woff");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "ABC Whyte Edu";
+    src: url("./ABCWhyteEdu-Extralight.woff") format("woff");
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: "ABC Whyte Edu";
+    src: url("./ABCWhyteEdu-Book.woff") format("woff");
+    font-weight: 300;
+}
+
 :root {
     font-size: 120%;
     --color1: white;
@@ -14,12 +32,17 @@
     --spaceL: 3rem;
     --spaceM: 2rem;
     --spaceS: 1rem;
+
+    --font-family: "ABC Whyte Edu";
+    --bold: 700;
+    --medium: 300;
+    --light: 200;
 }
 
 h1 {
     font-size: var(--textL);
-    text-transform: uppercase;
     padding-block-start: var(--spaceL);
+    font-weight: var(--medium);
 }
 
 .name {
@@ -28,12 +51,14 @@ h1 {
 }
 
 body {
-    font-family: "PP Editorial Old";
+    font-family: var(--font-family);
     font-size: var(--textS);
     padding-inline: var(--spaceL);
-    color: (var(--color2));
+    color: var(--color2);
     block-size: 100vh;
     display: grid;
+    text-transform: uppercase;
+    font-weight: var(--light);
 }
 
 ol {
@@ -48,6 +73,7 @@ li {
 	border-block-end-width: 0.10rem;
     font-size: var(--textM);
     text-transform: uppercase;
+    font-weight: var(--medium);
     
     :hover {
         color: #413CFF;
@@ -72,7 +98,7 @@ a:hover {
     justify-content: end;
 }
 
-.row, .end {
+.row, .end, hgroup {
     display: flex;
     flex-direction: row;
     gap: var(--spaceM);
