@@ -23,11 +23,13 @@
 
 :root {
     font-size: 120%;
-    --color1: white;
-    --color2: #191919;
+    --white: #ffffff;
+    --dark: #191919;
+    --highlight: #FF3737; 
     --textL: 4rem;
     --textM: 2rem;
     --textS: 1rem;
+    --textXS: 0.8rem;
 
     --spaceL: 3rem;
     --spaceM: 2rem;
@@ -39,16 +41,134 @@
     --light: 200;
 }
 
+body {
+    font-family: var(--font-family);
+    text-transform: uppercase;
+    padding: var(--spaceM);
+    font-weight: var(--light);
+    font-size: var(--textXS);
+    block-size: 90vh;
+}
+
 h1 {
+    font-size: var(--textM);
+    font-weight: var(--medium);
+}
+
+hgroup {
+    display: flex;
+    flex-direction: column;
+    padding-block-end: var(--spaceL);
+}
+
+.row {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    padding-block-end: var(--spaceL);
+}
+
+li {
+    border-block-end-color: var(--dark);
+    border-block-end-style: solid;
+	border-block-end-width: 0.10rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: var(--spaceS);
+}
+
+ol {
+    padding-block-end: var(--spaceL);
+}
+
+li a {
+    font-size: var(--textS);
+    font-weight: var(--medium);
+}
+
+a:hover {
+    background-color: var(--highlight);
+    color: var(--white);
+}
+
+body:has(dialog[open]) { overflow: hidden; }
+
+dialog {
+
+    background-color: var(--dark); 
+    justify-items: center;
+    color: var(--white);
+    padding: var(--spaceL);
+    position: fixed;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    width: 30vw;
+    height: 100vh;
+    max-width: 30vw;
+    max-height: 100vh;
+    margin: 0;
+    overflow-y: auto;
+
+    @media(width <600px){
+        width: 90vw;
+        height: auto;          
+        max-height: 85vh;       
+        padding: var(--spaceM);
+    }
+
+    &[open] { display: grid }
+
+    button {
+        background-color: var(--dark);
+        color: var(--brat);
+        font-family: var(--font-family2);
+        font-size: var(--textS);
+        padding: calc(var(--spaceS)*0.2);
+        cursor: pointer;
+
+    }
+
+    &::backdrop {
+		background-color: rgb(0 0 0 / 75%);
+	}
+
+}
+
+.close-button {
+    padding-block-end: var(--spaceM);
+}
+
+@media (width > 650px) {
+    hgroup {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .row {
+        justify-content: start;
+        gap: var(--spaceM);
+    }
+}
+
+@media (width > 950px) {
+    h1 {
+        font-size: calc(var(--textM)*1.5);
+    }
+    li a {
+        font-size: var(--textM);
+    }
+    body {
+        block-size: 100vh;
+        font-size: var(--textS);
+    }
+}
+/* h1 {
     font-size: var(--textL);
     padding-block-start: var(--spaceL);
     font-weight: var(--medium);
 }
 
-.name {
-    font-size: var(--textS);
-    padding-block-end: var(--spaceS);
-}
 
 body {
     font-family: var(--font-family);
@@ -71,27 +191,22 @@ li {
     border-block-end-color: var(--color2);
     border-block-end-style: solid;
 	border-block-end-width: 0.10rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+li a {
     font-size: var(--textM);
     text-transform: uppercase;
     font-weight: var(--medium);
-    
-    :hover {
-        color: #413CFF;
-        /* font-size: calc(var(--textM)*1.5); not sure how I feel about this yet */ 
-    }
 }
-
-footer a {
-   text-decoration: underline;
-}
-
-footer a:hover {
-    color: #413CFF;
-}
-
 
 a:hover {
-    color: #413CFF; 
+    background-color: var(--highlight);
+    color: var(--color1);
 }
 
 .end {
@@ -105,8 +220,15 @@ a:hover {
     justify-content: space-between;
 }
 
+footer {
+    font-size: calc(var(--textS) * 0.8);
+}
 
 @media (width < 550px) {
+
+    h1 {
+        font-size: var(--textM);
+    }
     .row {
         flex-direction: column;
         gap: var(--spaces);
@@ -114,7 +236,11 @@ a:hover {
     body {
         block-size: 95vh;
     }
-    li {
-    font-size: calc(var(--textM)/1.5);
+    li a {
+        font-size: var(--textS);
     }
+
+    p {
+        font-size: calc(var(--textS) * 0.);
     }
+} */
