@@ -191,3 +191,32 @@ dialog a {
         font-size: var(--textS);
     }
 }
+
+
+/* .iframes {
+    padding-block: var(--spaceL);
+    display: flex;
+    flex-direction: column;
+
+    @media (width > 650px) {
+        flex-direction: row;
+        width: 100%;
+    }
+} */
+
+.iframes {
+    padding-block: var(--spaceL);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spaceS);
+
+    @media (width > 650px) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.iframes iframe {
+    width: 100%;
+    height: 200px; 
+    border-radius: 8px;
+}
