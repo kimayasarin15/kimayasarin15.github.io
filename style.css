@@ -101,6 +101,7 @@ li a:hover {
 .row a:hover {
     background-color: var(--highlight);
     color: var(--white);
+    border-radius: 5px;
 }
 
 footer {
@@ -165,6 +166,7 @@ dialog a {
     background-color: var(--dark);
     color: var(--white);
     cursor: pointer;
+    border-radius: 5px;
 }
 
 
