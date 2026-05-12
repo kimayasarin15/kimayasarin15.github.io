@@ -81,9 +81,10 @@ h1 {
     font-size: var(--textS);
 }
 
-img {
+.flex-box-img {
     border-radius: 10px;
 }
+
 li {
     border-block-end-color: var(--dark);
     border-block-end-style: solid;
