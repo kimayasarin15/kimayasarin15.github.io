@@ -201,20 +201,23 @@ dialog a {
         justify-content: space-between;
         gap: var(--space);
     }
+    li p {
+        font-size: var(--textS);
+    }
 }
 
 @media (width > 950px) {
     h1 {
         font-size: var(--textL);
     }
+    li {
+        padding-block: calc(var(--spaceS)*1.5);
+    }
     li a {
-        font-size: var(--textM);
+        font-size: var(--textS);
     }
     body {
         block-size: 100vh;
-        font-size: var(--textS);
-    }
-    li p {
         font-size: var(--textS);
     }
     ol {
@@ -228,6 +231,7 @@ dialog a {
         flex-direction: row-reverse;
         justify-content: space-between;
         width: 100%;   
+        gap: var(--spaceL);
     }
 }
 
