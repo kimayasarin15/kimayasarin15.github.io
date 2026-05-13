@@ -29,12 +29,12 @@
     --textL: 4rem;
     --textM: 2rem;
     --textS: 1rem;
-    --textXS: 0.6rem;
+    --textXS: 0.8rem;
 
     --spaceL: 3rem;
     --spaceM: 2rem;
     --spaceS: 1rem;
-    --spaceXS: O.5rem;
+    --spaceXS: 0.5rem;
 
     --font-family: "ABC Whyte Edu";
     --bold: 700;
@@ -77,12 +77,21 @@ h1 {
     flex-direction: row;
     gap: var(--spaceS);
 }
+
 .row p{
     font-size: var(--textS);
 }
 
 .flex-box-img {
     border-radius: 10px;
+    overflow: hidden;
+}
+
+.flex-box-img img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    display: block;
 }
 
 li {
@@ -188,6 +197,16 @@ dialog a {
     width: fit-content;
 }
 
+@media (width < 450px) {
+    .row p {
+        font-size: var(--textXS);
+    }
+
+    .modal-button {
+        font-size: var(--textXS);
+    }
+}
+
 @media (width > 570px) {
     
     h1 {
@@ -224,7 +243,7 @@ dialog a {
         flex: 1;
     }
     .flex-box-img {
-        flex: 1;
+        flex: 1.2;
     }
     .flex-box {
         display: flex;
