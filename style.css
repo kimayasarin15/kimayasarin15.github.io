@@ -125,9 +125,6 @@ li a:hover {
     border-radius: 5px;
 }
 
-/* footer {
-    padding-block: var(--spaceL);
-} */
 
 body:has(dialog[open]) { overflow: hidden; }
 
@@ -202,7 +199,7 @@ dialog a {
     .row {
         flex-direction: row;
         justify-content: space-between;
-        gap: var(--spaceM);
+        gap: var(--space);
     }
 }
 
@@ -225,7 +222,6 @@ dialog a {
     }
     .flex-box-img {
         flex: 1;
-        /* height: auto; */
     }
     .flex-box {
         display: flex;
