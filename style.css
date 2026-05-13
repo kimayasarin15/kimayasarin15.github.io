@@ -252,6 +252,9 @@ dialog a {
         width: 100%;   
         gap: var(--spaceL);
     }
+    .row2 {
+        gap: var(--spaceL);
+    }
 }
 
 
