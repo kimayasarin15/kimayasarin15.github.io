@@ -47,18 +47,29 @@ body {
     text-transform: uppercase;
     padding: var(--spaceM);
     font-weight: var(--light);
-    /* font-size: var(--textXS); */
-    /* background-color: var(--dark); */
-    /* block-size: 90vh; */
     /* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/cursor */
     cursor: url("cursor.svg"), pointer;
 }
 
-h1 {
-    font-size: var(--textM);
-    font-weight: var(--medium);
+hgroup {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: var(--spaceXS);
     padding-block-end: var(--spaceS);
 }
+
+h1 {
+    font-size: calc(var(--textM)*1.1);
+    font-weight: var(--medium);
+}
+
+/* I was having some issues with my alignment of the letter K so I manually adjusted it
+https://typography-interaction-2526.github.io/topic/advanced-css/#precise-text-positioning */
+.type-alignment {
+    margin-inline-start: -0.08em;
+}
+
 .flex-box {
     display: flex;
     flex-direction: column;
@@ -112,7 +123,6 @@ li p {
 .index {
     display: flex;
     flex-direction: column;
-    /* gap: var(--spaceS); */
 }
 
 ol {
@@ -168,7 +178,6 @@ dialog {
         font-size: var(--textS);
         padding: calc(var(--spaceS)*0.2);
         cursor: pointer;
-
     }
 
     &::backdrop {
@@ -195,6 +204,11 @@ dialog a {
     cursor: pointer;
     border-radius: 5px;
     width: fit-content;
+}
+
+.modal-button:hover {
+        background-color: var(--highlight);
+        color: var(--white);
 }
 
 @media (width < 450px) {
@@ -258,45 +272,12 @@ dialog a {
 }
 
 
-
-
-
-
-/* .iframes {
-    padding-block: var(--spaceL);
-    display: flex;
-    flex-direction: column;
-
-    @media (width > 650px) {
+@media (width > 1150px) {
+    hgroup {
+        display: flex;
         flex-direction: row;
-        width: 100%;
+        justify-content: space-between;
     }
-} */
-
-/* .iframes {
-    padding-block: var(--spaceL);
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--spaceS);
-    @media (width > 650px) {
-        grid-template-columns: repeat(5, 1fr);
-    }
-} */
-
-
-/* .iframes iframe {
-    width: 100%;
-    height: 200px; 
-    border-radius: 8px;
-    border-style: solid;
-    border-width: 0.2px;
-} */
-
-
-.hover iframe {
-    display: none;
 }
 
-li:hover .hover iframe {
-    display: block;
-}
+
